@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border: 3px solid white;
+    }
+
+        body{
+            font-family: sans-serif;
+        }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #111;
+    }
+
+    .active {
+        background-color: #2c0050;
+    }
+    </style>
     <meta charset="UTF-8">
-    <title>Cara Art ShowCase</title>
-    <h1>Cara Art Showcase</h1>
-    <h2>Welcome to the ArtShow</h2>
-    <h3>Cara Bio:</h3>
-    <p>Cara is an Artist located in the city of ⬛⬛⬛⬛⬛⬛<br>
-    Cara themes all here work around ⬛⬛⬛⬛⬛⬛⬛<br></p>
+    <ul>
+        <li><a class="active" href="home.html">Home</a></li>
+        <li><a href="listart.php">Listings</a></li>
+        <li><a href="admin.php">Administrative</a></li>
+        <li><a href="trackntrace.php">Track & Trace Log-in</a></li>
+    </ul>
+    <title>CaraArt - Home</title>
+    <h1>CaraArt - Home</h1>
+    <h2>Who is Cara?</h2>
+    <b>Cara is a [This is Filler, yes indeed filler, I don't know what the fuck to write cause I'm hacing writer's block, talk to me later]</b><br>
+    <button onclick="location.href = 'https://devweb2021.cis.strath.ac.uk/~tmb19188/CaraMcGara/CaraMcGara/listart.php';">Listing</button>
+    <button onclick="location.href = 'https://devweb2021.cis.strath.ac.uk/~tmb19188/CaraMcGara/CaraMcGara/admin.php';">Administrative</button>
+    <p>Credit for Images goes to <a href= 'https://twitter.com/art_novic'>@art_novic</a> | who I have received permission from to utilize</p>
 </head>
 <body>
 

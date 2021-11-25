@@ -38,6 +38,31 @@
         padding: 5px;
     }
 
+    .button {
+        background-color: #240050;
+        border: white solid 4px;
+        border-radius: 100px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        max-width: 480px;
+        min-height: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+    }
+
+    .proof {
+        background-color: #a9a9a9;
+        color: #000;
+        width: fit-content;
+        float: left;
+        border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+    }
+
     ul {
         list-style-type: none;
         margin: 0;
@@ -49,6 +74,10 @@
 
     li {
         float: left;
+    }
+
+    img{
+        width:600px;
     }
 
     li a {
@@ -82,7 +111,7 @@
 
 <form method='post' action='admin.php'>
     <p>Password:</p><input type='password' name='password'>
-        <input type='submit'>
+        <input class = 'button' type='submit'>
 </form>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -100,13 +129,25 @@
                 $result = $conn->query($sql);
                 echo "<div class='leftDiv'>";
                 echo "<h1>Current Orders!</h1>";
-                    while ($row = $result->fetch_assoc()) {
-                        echo "Name: " . $row["cname"] . "<br>";
-                        echo "Phone Number: " . $row["phone"] . "<br>";
-                        echo "Email: " . $row["email"] . "<br>";
-                        echo "Address: " . $row["address"] . "<br>";
-                        echo "Picture's Name: " . $row["pname"] . "<br>";
-                        echo "Address: " . $row["id"] . "<hr><br>";
+                while ($row = $result->fetch_assoc()) {
+                    echo "Name: " . $row["cname"] . "<br>";
+                    echo "Phone Number: " . $row["phone"] . "<br>";
+                    echo "Email: " . $row["email"] . "<br>";
+                    echo "Address: " . $row["address"] . "<br>";
+                    echo "Picture's Name: " . $row["pname"] . "<br>";
+                    echo "Address: " . $row["id"] . "<hr><br>";
+                }
+                echo "</div>";
+
+                $sql = "SELECT * FROM `trackntrace`";
+                $result = $conn->query($sql);
+                echo "<div class='rightDiv'>";
+                echo "<h1>Track & Trace Bookings!</h1>";
+                while ($row = $result->fetch_assoc()) {
+                    echo "Name: " . $row["name"] . "<br>";
+                    echo "Phone Number: " . $row["phone"] . "<br>";
+                    echo "Date: " . $row["date"] . "<br>";
+                    echo "Time Slot: " . $row["Time"] . "<hr><br>";
                 }
                 echo "</div>";
                 echo "<div class='rightDiv'><h1>Add New Entry</h1><form method = 'post' action='newEntry.php' enctype='multipart/form-data'>";
@@ -120,15 +161,15 @@
                 echo "<br><br>";
 
                 echo "<input type = 'hidden' name='password' value = 'caraART21'>";
-                echo "<input type='submit'>";
+                echo "<input class='button' type='submit'>";
                 echo "</div>";
 
                 $sql = "SELECT imgData FROM `Paintings` WHERE ID <= 1";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_array($result)) {
                     ?>
-                        <h1>Proof of Permission to use Images</h1>
-                    <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['imgData']); ?>" /> <br>
+                        <div class="proof"><h1>Proof of Permission to use Images</h1>
+                    <img src="data:image/jpg;charset=utf8;base64,<?php echo base64_encode($row['imgData']); ?>" /></div> <br>
 <?php
                     }
             } else {

@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <style>
-        body{
+        body {
             position: center;
             background-color: #b489c7;
-            color: white;
+            color: black;
             font-family: sans-serif;
+            font-weight: bold;
         }
         .div1 {
             width: 300px;

@@ -5,7 +5,7 @@
         body {
             position: center;
             background-color: #b489c7;
-            color: black;
+            color: white;
             font-family: sans-serif;
             font-weight: bold;
         }

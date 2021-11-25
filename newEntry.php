@@ -12,6 +12,21 @@
             font-family: sans-serif;
             font-weight: bold;
         }
+        .button {
+            background-color: #240050;
+            border: white solid 4px;
+            border-radius: 100px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            max-width: 480px;
+            min-height: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+        }
+
         ul {
             list-style-type: none;
             margin: 0;
@@ -77,9 +92,8 @@
         $allowed = array('jpg', 'png', 'jpeg', 'gif');
         $image = $_FILES['image']['tmp_name'];
         $imgContent = addslashes(file_get_contents($image));
-        $rid = rand(1, 99999);
-        $sql = "INSERT INTO Paintings (name, dateOfCompletion, width, height, price, description, imgData, ID) VALUES 
-            ('$sqlpname','$sqldoc','$sqlwidth','$sqlheight','$sqlprice','$sqldescription','$imgContent','$rid')";
+        $sql = "INSERT INTO Paintings (name, dateOfCompletion, width, height, price, description, imgData) VALUES 
+            ('$sqlpname','$sqldoc','$sqlwidth','$sqlheight','$sqlprice','$sqldescription','$imgContent')";
         if ($conn->query($sql) === TRUE) {
             echo "<br><p>New Entry added to Database</p><br>";
         } else {
@@ -94,7 +108,7 @@
     <br>
     <form method = 'post' action = 'admin.php'>
         <input type = 'hidden' name='password' value = '<?php echo $_POST['password']; ?>'>
-        <input type='submit' value = 'Return'>
+        <input class = 'button' type='submit' value = 'Return'>
     </form>
 
 </head>

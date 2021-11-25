@@ -5,8 +5,12 @@
     <meta charset="UTF-8">
     <style>
 
-        body{
+        body {
+            position: center;
+            background-color: #b489c7;
+            color: black;
             font-family: sans-serif;
+            font-weight: bold;
         }
         ul {
             list-style-type: none;

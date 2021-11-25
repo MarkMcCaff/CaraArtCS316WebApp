@@ -46,6 +46,21 @@
             background-color: #dedede;
 
         }
+
+        .button {
+            background-color: #240050;
+            border: white solid 4px;
+            border-radius: 100px;
+            color: #ffffff;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            max-width: 480px;
+            min-height: 40px;
+            padding-left: 40px;
+            padding-right: 40px;
+            text-align: center;
+        }
     </style>
     <title>CaraArt - Purchased</title>
     <ul>
@@ -83,7 +98,12 @@
                 "CaraART Order Confirmation",
                 "Dear " . $_POST['cName'] . "\n
             This message is to confirm your order " . $_POST['pname'] . " from CaraART.com");
-            echo "Thank you for your purchase";
+            echo "<br><br><div class='div1'><br>Thank you for your purchase<br><br>";
+            echo "<br>Product Name: ".$_POST['pname'];
+            echo "<br>Product Name: ".$_POST['cName'];
+            echo "<br>Shipped to  : ".$_POST['address'];
+            echo "<br>Email       : ".$_POST['email'];
+            echo "<br><br><a class='button' href='listart.php'>Return</a></div>";
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }

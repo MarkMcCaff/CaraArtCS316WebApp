@@ -24,6 +24,21 @@
         float: left;
     }
 
+    .button {
+        background-color: #240050;
+        border: white solid 4px;
+        border-radius: 100px;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        max-width: 480px;
+        min-height: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-align: center;
+    }
+
     li a {
         display: block;
         color: white;
@@ -71,7 +86,7 @@
     }
 
     .div1 {
-        width: 30%;
+        width: 19%;
         height: fit-content;
         padding: 5px;
         border: 4px white solid;
@@ -103,7 +118,7 @@
                                   max="<?php echo date("Y-m-d", strtotime(" +28 days")); ?>" onchange="showDiv('time',this)">
 
     <div style="display:none" id='time'>
-    <p>Please Select a time to attend:</p>
+    <p>Please Select a time to attend:
     <select name="timeslot" onchange="showDiv('division',this)">
         <option value="10:00-11:00">10:00:11:00</option>
         <option value="11:00-12:00">11:00:12:00</option>
@@ -111,14 +126,14 @@
         <option value="13:00-14:00">13:00:14:00</option>
         <option value="14:00-15:00">14:00:15:00</option>
         <option value="15:00-16:00">15:00:16:00</option>
-    </select>
+    </select></p>
     </div>
     <div id='division' style="display:none">
         <p>Name: </p><input type='text' name='name'>
         <p>Phone Number: </p><input type='text' name='phone'>
-    </div>
     <br><br>
-    <input type='submit'><br><br>
+    <input class='button' type='submit' value="Submit"><br><br>
+    </div>
 </form>
 </div>
 

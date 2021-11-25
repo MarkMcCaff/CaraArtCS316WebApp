@@ -11,13 +11,6 @@
             font-weight: bold;
         }
 
-        .div1 {
-            width: 300px;
-            border: 3px solid white;
-            padding: 10px;
-            background: #dddddd;
-        }
-
         table, th {
             border: 3px solid white;
             padding: 5px;

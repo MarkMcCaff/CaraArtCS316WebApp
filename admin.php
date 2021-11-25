@@ -3,8 +3,12 @@
 
 <style>
 
-    body{
+    body {
+        position: center;
+        background-color: #b489c7;
+        color: black;
         font-family: sans-serif;
+        font-weight: bold;
     }
     .outerDiv {
         color: #fff;
@@ -15,7 +19,7 @@
     }
 
     .leftDiv {
-        background-color: #efefef;
+        background-color: #b0b0b0;
         color: #000;
         width: 25%;
         float: left;
@@ -25,7 +29,7 @@
     }
 
     .rightDiv {
-        background-color: #efefef;
+        background-color: #a9a9a9;
         color: #000;
         width: 22%;
         float: left;
@@ -102,7 +106,7 @@
                         echo "Email: " . $row["email"] . "<br>";
                         echo "Address: " . $row["address"] . "<br>";
                         echo "Picture's Name: " . $row["pname"] . "<br>";
-                        echo "Address: " . $row["id"] . "<br><br><br>";
+                        echo "Address: " . $row["id"] . "<hr><br>";
                 }
                 echo "</div>";
                 echo "<div class='rightDiv'><h1>Add New Entry</h1><form method = 'post' action='newEntry.php' enctype='multipart/form-data'>";

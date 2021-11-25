@@ -8,7 +8,7 @@
             background-color: #b489c7;
             color: black;
             font-family: sans-serif;
-
+            font-weight: bold;
         }
 
         .div1 {

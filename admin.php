@@ -135,7 +135,7 @@
                     echo "Email: " . $row["email"] . "<br>";
                     echo "Address: " . $row["address"] . "<br>";
                     echo "Picture's Name: " . $row["pname"] . "<br>";
-                    echo "Address: " . $row["id"] . "<hr><br>";
+                    echo "Picture's ID: " . $row["id"] . "<hr><br>";
                 }
                 echo "</div>";
 
